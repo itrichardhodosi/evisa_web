@@ -1,0 +1,65 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block titulo %}Contacto – Eje Vida Saludable{% endblock %}
+
+{% block hero %}
+<section class="bg-evisa-secondary text-dark text-center py-5">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Contáctame</h1>
+    <p class="lead mb-0">Estoy aquí para ayudarte. Envía tu mensaje o visítame en el mapa.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block contenido %}
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Formulario de Contacto -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title mb-4 text-evisa-primary">Envíame un mensaje</h4>
+            <form method="post" action="{% url 'contacto' %}">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="id_nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="id_nombre" name="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="id_email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="id_email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="id_mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="id_mensaje" name="mensaje" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-evisa-secondary">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa Interactivo -->
+      <div class="col-lg-6">
+        <div class="ratio ratio-4x3 shadow-sm rounded">
+          <iframe 
+            src="https://www.google.com/maps/d/embed?mid=1vXGcmr9d5u8R5Ql4tkVXXJFGFHjTsrw&ehbc=2E312F"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="mt-3 text-center">
+          <a href="https://wa.me/message/HBNOZHNXPUFCK1" class="btn btn-whatsapp me-2">
+            <i class="bi bi-whatsapp me-1"></i> WhatsApp
+          </a>
+          <a href="mailto:tunombre@dominio.com" class="btn btn-primary">
+            <i class="bi bi-envelope-fill me-1"></i> Email
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

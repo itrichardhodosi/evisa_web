@@ -6,11 +6,14 @@ It exposes the ASGI callable as a module-level variable named ``application``.
 For more information on this file, see
 https://docs.djangoproject.com/en/5.2/howto/deployment/asgi/
 """
-
 import os
+from pathlib import Path
+import dotenv
 
-from django.core.asgi import get_asgi_application
+# Leer .env
+dotenv.read_dotenv(Path(__file__).resolve().parent.parent / ".env")
+# Definir settings module
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", os.getenv("DJANGO_SETTINGS_MODULE"))
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'evisa_web.settings')
-
-application = get_asgi_application()
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()

@@ -1,0 +1,93 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block titulo %}Sobre mí – Eje Vida Saludable{% endblock %}
+
+{% block hero %}
+<section class="bg-evisa-secondary text-dark py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Conoce a Kelly Martínez</h1>
+    <p class="lead">Nutricionista Dietista apasionada por transformar vidas a través de la alimentación.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block contenido %}
+  <!-- Sección perfil -->
+  <section class="py-5">
+    <div class="container row align-items-center gx-5">
+      <div class="col-lg-5 text-center mb-4 mb-lg-0">
+        <img src="{% static 'main/images/nutricionista.jpg' %}" alt="Kelly Martínez" class="img-fluid rounded-circle shadow" style="max-width: 300px;">
+      </div>
+      <div class="col-lg-7">
+        <h2 class="mb-3">Soy Kelly Martínez</h2>
+        <p>Con más de 5 años de experiencia en el área este de Puerto Rico, me especializo en planes de alimentación personalizados, manejo de condiciones crónicas como diabetes e hipertensión, y talleres grupales para fomentar estilos de vida saludables.</p>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-check2-circle text-evisa-primary me-2"></i> Licenciatura en Nutrición – Universidad de Puerto Rico</li>
+          <li><i class="bi bi-check2-circle text-evisa-primary me-2"></i> Certificación en Manejo de Diabetes</li>
+          <li><i class="bi bi-check2-circle text-evisa-primary me-2"></i> Talleres de Cocina Saludable y Educación Nutricional</li>
+        </ul>
+        <a href="https://wa.me/message/HBNOZHNXPUFCK1" class="btn btn-whatsapp me-2 mt-3">
+          <i class="bi bi-whatsapp me-1"></i> Contáctame
+        </a>
+        <a href="https://biolink.info/Ejevidasaludable" class="btn btn-evisa-secondary mt-3">
+          Más formas de contacto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección redes sociales -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h3 class="mb-4">Sígueme en redes</h3>
+      <a href="https://www.facebook.com/ejevidasaludable/" class="text-evisa-primary fs-2 mx-3" target="_blank">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/ejevidasaludable/" class="text-evisa-primary fs-2 mx-3" target="_blank">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://wa.me/message/HBNOZHNXPUFCK1" class="text-evisa-primary fs-2 mx-3" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección valor diferencial -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h3 class="mb-4">¿Por qué elegirme?</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-heart-pulse fs-1 mb-3 text-evisa-primary"></i>
+              <h5 class="card-title">Atención Personalizada</h5>
+              <p class="card-text">Cada plan se adapta a tus necesidades, gustos y estilo de vida.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-people fs-1 mb-3 text-evisa-primary"></i>
+              <h5 class="card-title">Apoyo Constante</h5>
+              <p class="card-text">Seguimiento continuo y asesoría para cumplir tus metas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-book fs-1 mb-3 text-evisa-primary"></i>
+              <h5 class="card-title">Educación Nutricional</h5>
+              <p class="card-text">Herramientas y conocimientos para que entiendas el porqué de tus elecciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% block extra_section %}{% endblock %}
+{% endblock %}

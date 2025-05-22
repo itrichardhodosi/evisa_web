@@ -1,0 +1,17 @@
+{# main/templates/main/post_detail.html #}
+{% extends 'main/base.html' %}
+{% block titulo %}{{ object.titulo }} – Blog{% endblock %}
+
+{% block contenido %}
+<article class="mb-5">
+  <h1>{{ object.titulo }}</h1>
+  <p class="text-muted small">Publicado el {{ object.publicado|date:"d M Y" }} en {{ object.categoria }}</p>
+  {% if object.imagen %}
+    <img src="{{ object.imagen.url }}" class="img-fluid mb-3" alt="{{ object.titulo }}">
+  {% endif %}
+  <div class="post-content">
+    {{ object.contenido|linebreaksbr }}
+  </div>
+</article>
+<a href="{% url 'post_list' %}" class="btn btn-outline-secondary">← Volver al blog</a>
+{% endblock %}

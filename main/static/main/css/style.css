@@ -1,0 +1,50 @@
+:root {
+  --color-primario: #52B2A0;
+  --color-secundario: #CEB261;
+  --color-acento: #D0B467;
+}
+
+/* Navbar primario */
+.navbar-bg-primary {
+  background-color: var(--color-primario) !important;
+}
+
+/* Texto de links */
+.navbar .nav-link {
+  color: #fff;
+  transition: color 0.2s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--color-acento) !important;
+}
+
+/* Botón de WhatsApp personalizado */
+.btn-accent {
+  background-color: var(--color-acento);
+  color: #000;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-accent:hover {
+  background-color: var(--color-primario);
+  transform: scale(1.05);
+}
+/* style.css */
+.navbar-evisa {
+  background-color: #52B2A0 !important;
+}
+.navbar-evisa .nav-link {
+  color: #fff;
+}
+.navbar-evisa .navbar-brand span,
+.navbar-evisa .navbar-brand img {
+  color: #fff;
+}
+
+/* Asegura que el panel colapsado tenga el color evisa al mostrarse */
+.navbar-evisa .navbar-collapse,
+.navbar-evisa .navbar-collapse.show {
+  background-color: var(--evisa-primary) !important;
+}
+

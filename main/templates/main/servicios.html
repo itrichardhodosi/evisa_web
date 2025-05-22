@@ -1,0 +1,97 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block titulo %}Servicios – Eje Vida Saludable{% endblock %}
+
+{% block hero %}
+<section class="bg-evisa-secondary text-dark text-center py-5">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Servicios</h1>
+    <p class="lead mb-0">Descubre cómo puedo ayudarte a alcanzar tus metas de salud.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block contenido %}
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Plan de Alimentación -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="{% static 'main/images/servicio-plan.jpg' %}" class="card-img-top" alt="Plan de Alimentación">
+            <div class="card-body text-center">
+              <i class="bi bi-journal-medical fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Plan de Alimentación</h5>
+              <p class="card-text">Menús semanales diseñados según tus gustos y objetivos, con recetas fáciles de preparar.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Control de Peso -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="{% static 'main/images/servicio-peso.jpg' %}" class="card-img-top" alt="Control de Peso">
+            <div class="card-body text-center">
+              <i class="bi bi-graph-up-arrow fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Control de Peso</h5>
+              <p class="card-text">Seguimiento personalizado para perder o ganar peso de forma saludable y sostenible.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Diabetes & Hipertensión -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="{% static 'main/images/servicio-salud.jpg' %}" class="card-img-top" alt="Diabetes e Hipertensión">
+            <div class="card-body text-center">
+              <i class="bi bi-heart-pulse fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Diabetes & Hipertensión</h5>
+              <p class="card-text">Asesoría y planes nutricionales adaptados para el manejo de condiciones crónicas.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Talleres Grupales -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="{% static 'main/images/servicio-taller.jpg' %}" class="card-img-top" alt="Talleres Grupales">
+            <div class="card-body text-center">
+              <i class="bi bi-people fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Talleres Grupales</h5>
+              <p class="card-text">Charlas y dinámicas para fomentar hábitos saludables en comunidad.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Coaching Nutricional -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="{% static 'main/images/servicio-coaching.jpg' %}" class="card-img-top" alt="Coaching Nutricional">
+            <div class="card-body text-center">
+              <i class="bi bi-person-lines-fill fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Coaching Nutricional</h5>
+              <p class="card-text">Sesiones individuales de apoyo y motivación para mantener tu progreso.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Consultas Online -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="{% static 'main/images/servicio-online.jpg' %}" class="card-img-top" alt="Consultas Online">
+            <div class="card-body text-center">
+              <i class="bi bi-laptop fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Consultas Online</h5>
+              <p class="card-text">Atención virtual para asesorarte desde la comodidad de tu hogar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA final -->
+      <div class="text-center mt-5">
+        <p class="mb-3">¿Listo para comenzar? Agenda tu cita hoy mismo.</p>
+        <a href="https://wa.me/message/HBNOZHNXPUFCK1" class="btn btn-success btn-lg">
+          <i class="bi bi-whatsapp me-1"></i> Chatea por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

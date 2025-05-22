@@ -1,0 +1,181 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block titulo %}Recetas – Eje Vida Saludable{% endblock %}
+
+{% block hero %}
+<section class="bg-evisa-secondary text-dark text-center py-5">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Recetas Saludables</h1>
+    <p class="lead mb-0">Porcionadas para pacientes con diabetes e hipertensión, con sabor boricua.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block contenido %}
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- 1: Asopao de Vegetales -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?soup,vegetables" class="card-img-top" alt="Asopao de Vegetales">
+          <div class="card-body">
+            <h5 class="card-title text-evisa-primary">Asopao de Vegetales</h5>
+            <p class="card-text">Porción: 1 taza &nbsp;|&nbsp; Calorías: 180 kcal</p>
+             <button class="btn p-0 text-evisa-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recetaAsopao" aria-expanded="false" aria-controls="recetaAsopao">
+              Ver receta ▼
+            </button>
+            <div class="collapse mt-2" id="recetaAsopao">
+              <h6>Ingredientes:</h6>
+              <ul>
+                <li>1 cda aceite de oliva</li>
+                <li>¼ taza cebolla picada</li>
+                <li>2 dientes ajo picados</li>
+                <li>1 taza zanahoria en cubos</li>
+                <li>1 taza apio en rodajas</li>
+                <li>1 pimiento en cubos</li>
+                <li>2 tomates medianos picados</li>
+                <li>4 tazas caldo de verduras bajo sodio</li>
+                <li>¼ taza arroz integral</li>
+                <li>Sal y pimienta al gusto</li>
+                <li>1 cda cilantro picado</li>
+              </ul>
+              <h6>Preparación:</h6>
+              <ol>
+                <li>Calienta el aceite y sofríe cebolla y ajo hasta transparentes.</li>
+                <li>Añade zanahoria, apio, pimiento y tomate; cocina 5 min.</li>
+                <li>Vierte el caldo y lleva a ebullición.</li>
+                <li>Agrega arroz, reduce fuego y cocina 15 min hasta que esté tierno.</li>
+                <li>Sazona con sal, pimienta y espolvorea cilantro antes de servir.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: Ensalada de Guineos y Aguacate -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?banana,avocado,salad" class="card-img-top" alt="Ensalada de Guineos y Aguacate">
+          <div class="card-body">
+            <h5 class="card-title text-evisa-primary">Ensalada de Guineos y Aguacate</h5>
+            <p class="card-text">Porción: 1 plato pequeño &nbsp;|&nbsp; 200 kcal</p>
+            <button class="btn p-0 text-evisa-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recetaEnsalada" aria-expanded="false" aria-controls="recetaEnsalada">
+              Ver receta ▼
+            </button>
+            <div class="collapse mt-2" id="recetaEnsalada">
+              <h6>Ingredientes:</h6>
+              <ul>
+                <li>1 guineo verde en rodajas</li>
+                <li>½ aguacate en láminas</li>
+                <li>1 taza lechuga mixta</li>
+                <li>¼ taza pepino en rodajas</li>
+                <li>1 cda semillas de chía</li>
+                <li>2 cditas aceite de oliva</li>
+                <li>1 cdita vinagre de manzana</li>
+                <li>Sal y pimienta al gusto</li>
+              </ul>
+              <h6>Preparación:</h6>
+              <ol>
+                <li>Combina lechuga, pepino, guineo y aguacate en un bowl.</li>
+                <li>Mezcla aceite, vinagre, sal y pimienta para aderezo.</li>
+                <li>Vierte aderezo sobre la ensalada y espolvorea chía.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ <!-- Mofongo de Pollo Saludable -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?chicken,plantain" class="card-img-top" alt="Mofongo de Pollo Saludable">
+          <div class="card-body">
+            <h5 class="card-title text-evisa-primary">Mofongo de Pollo Saludable</h5>
+            <p class="card-text">Porción: ½ bola &nbsp;|&nbsp; 250 kcal</p>
+            <button class="btn p-0 text-evisa-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recetaMofongo" aria-expanded="false" aria-controls="recetaMofongo">
+              Ver receta ▼
+            </button>
+            <div class="collapse mt-2" id="recetaMofongo">
+              <h6>Ingredientes:</h6>
+              <ul>
+                <li>2 plátanos verdes cocidos y majados</li>
+                <li>1 taza pollo desmenuzado cocido (sin piel)</li>
+                <li>1 cda aceite de oliva</li>
+                <li>2 dientes ajo machacados</li>
+                <li>¼ taza caldo de pollo bajo sodio</li>
+                <li>Sal mínima y pimienta al gusto</li>
+              </ul>
+              <h6>Preparación:</h6>
+              <ol>
+                <li>Calienta el aceite y sofríe el ajo hasta dorar ligeramente.</li>
+                <li>Agrega el pollo y saltea 2 minutos.</li>
+                <li>Incorpora el caldo y mezcla con el plátano majado hasta formar una masa.</li>
+                <li>Forma una bola compacta y sirve caliente.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 4: Filete de Pescado al Coco -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?fish,coconut" class="card-img-top" alt="Filete de Pescado al Coco">
+          <div class="card-body">
+            <h5 class="card-title text-evisa-primary">Filete de Pescado al Coco</h5>
+            <p class="card-text">Porción: 120g &nbsp;|&nbsp; 180 kcal</p>
+            <button class="btn p-0 text-evisa-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recetaPescado" aria-expanded="false" aria-controls="recetaPescado">
+              Ver receta ▼
+            </button>
+            <div class="collapse mt-2" id="recetaPescado">
+              <h6>Ingredientes:</h6>
+              <ul>
+                <li>120g filete de pescado blanco</li>
+                <li>¼ taza leche de coco light
+
+                </li>
+                <li>1 cda jugo limón</li>
+                <li>Sal y pimienta al gusto</li>
+                <li>Cilantro picado para decorar</li>
+              </ul>
+              <h6>Preparación:</h6>
+              <ol>
+                <li>Marina el pescado con limón, sal y pimienta 10 min.</li>
+                <li>Cocina al vapor o a la plancha 5-7 min.</li>
+                <li>Sirve con leche de coco por encima y cilantro.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5: Torrejas de Batata sin Azúcar -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://source.unsplash.com/600x400/?sweet-potato,pancake" class="card-img-top" alt="Torrejas de Batata sin Azúcar">
+          <div class="card-body">
+            <h5 class="card-title text-evisa-primary">Torrejas de Batata sin Azúcar</h5>
+            <p class="card-text">Porción: 2 unidades &nbsp;|&nbsp; 170 kcal</p>
+            <button class="btn p-0 text-evisa-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recetaTorrejas" aria-expanded="false" aria-controls="recetaTorrejas">
+              Ver receta ▼
+            </button>
+            <div class="collapse mt-2" id="recetaTorrejas">
+              <h6>Ingredientes:</h6>
+              <ul>
+                <li>1 batata mediana rallada</li>
+                <li>1 huevo batido</li>
+                <li>2 cditas stevia</li>
+                <li>Canel
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+</section>
+{% endblock %}

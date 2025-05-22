@@ -4,3 +4,21 @@ __pycache__/
 db.sqlite3
 .vscode/
 .idea/
+
+
+# .gitignore
+# Entorno virtual
+/env/
+/env.bak/
+
+# Variables de entorno
+.env
+
+# Archivos compilados y temporales
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Bases de datos locales
+db.sqlite3

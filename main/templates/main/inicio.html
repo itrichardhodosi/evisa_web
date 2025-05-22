@@ -1,0 +1,328 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block titulo %}Inicio – Eje Vida Saludable{% endblock %}
+
+{% block hero %}
+<section class="text-center py-5" style="background-color: #CEB261;">
+  <div class="container">
+    <h1 class="display-5 fw-bold text-dark mb-3">Nutrición Personalizada en el Este de Puerto Rico</h1>
+    <p class="lead text-dark mb-4">
+      Asesoría profesional para mejorar tu salud, energía y bienestar. ¡Tu camino a un estilo de vida saludable comienza aquí!
+    </p>
+    <a href="https://wa.me/message/HBNOZHNXPUFCK1"
+       class="btn btn-success btn-lg me-2">
+      <i class="bi bi-whatsapp me-1"></i> Chatea por WhatsApp
+    </a>
+    <a href="https://biolink.info/Ejevidasaludable"
+       class="btn btn-evisa-secondary btn-lg">
+      Más formas de contacto
+    </a>
+  </div>
+</section>
+{% endblock %}
+
+{% block contenido %}
+  <!-- Sobre mí -->
+  <section class="py-5">
+    <div class="container row align-items-center gx-5">
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <img src="{% static 'main/images/nutricionista.jpg' %}"
+             class="img-fluid rounded shadow"
+             alt="Kelly Martínez – Nutricionista">
+      </div>
+      <div class="col-lg-7">
+        <h2 class="mb-3">Hola, soy Kelly Martínez</h2>
+        <p class="mb-4">
+          Soy nutricionista dietista con más de 5 años de experiencia
+          ayudando a pacientes del área este de Puerto Rico a alcanzar
+          sus metas de salud. Creo planes de alimentación sostenibles
+          y personalizados, adaptados a tu estilo de vida y necesidades.
+        </p>
+        <a href="{% url 'sobre-mi' %}" class="btn btn-primary">
+          Conoce mi historia
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Destacados -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="text-center mb-5">Servicios Destacados</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-journal-medical fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Plan de Alimentación</h5>
+              <p class="card-text">Menús semanales personalizados según tus gustos y objetivos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-graph-up-arrow fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Control de Peso</h5>
+              <p class="card-text">Seguimiento continuo para lograr y mantener tu peso ideal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-heart-pulse fs-1 text-evisa-primary mb-3"></i>
+              <h5 class="card-title">Diabetes & Hipertensión</h5>
+              <p class="card-text">Asesoría especializada para el manejo de condiciones crónicas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="{% url 'servicios' %}" class="btn btn-evisa-secondary">
+          Ver todos los servicios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios Reales de Google -->
+
+
+  <!-- Testimonios en Carousel -->
+
+  <!-- Testimonios en Carousel con indicadores y controles -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="text-center mb-5">Reviews de mis pacientes</h3>
+
+      <div id="testimonialCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+
+        <!-- INDICADORES -->
+        <div class="carousel-indicators mb-4">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
+                  class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="5"
+                  aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="6"
+                  aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="7"
+                  aria-label="Slide 8"></button>
+        </div>
+
+        <!-- SLIDES -->
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “Es una profesional excelente, en el tiempo que llevo siempre me he sentido en la confianza de expresarle mis dudas las que siempre atiende con apoyo y dedicación. Estoy muy agradecida.”
+                </p>
+                <h5 class="fw-bold">Nicole Vázquez</h5>
+                <small class="text-muted">Hace 42 semanas</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “Reseña no disponible.”
+                </p>
+                <h5 class="fw-bold">Isabel Velazquez</h5>
+                <small class="text-muted">Hace 48 semanas</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “Excelente, muy buena y tiene vasto conocimiento en el área. Muy profesional y nos motiva y nos brinda múltiples alternativas para llegar a nuestra meta.”
+                </p>
+                <h5 class="fw-bold">Lirianys Figueroa Velez</h5>
+                <small class="text-muted">Hace 50 semanas</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “Llevo casi 2 años con Kelly y me ha ayudado muchísimo. He aprendido a leer etiquetas, y a preparar diferentes platos...”
+                </p>
+                <h5 class="fw-bold">Adriana Ortiz-Morales</h5>
+                <small class="text-muted">Hace 50 semanas</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “EXCELENTE YA QUE TE HACE TUS DIETAS EN BASE A TUS PREFERENCIAS EN LAS COMIDAS Y TE DAN MUCHAS OPCIONES MUY BUENAS.”
+                </p>
+                <h5 class="fw-bold">Anabelle Pratts</h5>
+                <small class="text-muted">Hace 51 semanas</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “La mejor en la industria de la nutrición te trata super bien acuerdo a tus gustitos y las mejores que necesites en tu...”
+                </p>
+                <h5 class="fw-bold">Ruben Ramirez</h5>
+                <small class="text-muted">Hace 51 semanas</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 7 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “Hola, he aprendido a leer las etiquetas, verificando el contenido de sodio y azúcares, ya que tengo problemas de salud...”
+                </p>
+                <h5 class="fw-bold">Loida Valle</h5>
+                <small class="text-muted">Hace 51 semanas</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 8 -->
+          <div class="carousel-item">
+            <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+              <div class="card-body text-center">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-evisa-accent"></i><!-- x5 -->
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                  <i class="bi bi-star-fill text-evisa-accent"></i>
+                </div>
+                <p class="fst-italic mb-4">
+                  “Reseña no disponible.”
+                </p>
+                <h5 class="fw-bold">Johanna Perez</h5>
+                <small class="text-muted">4 mar 2024</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CONTROLES -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+
+        
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+
+
+  <!-- Testimonios en Carousel -->
+
+
+
+  <!-- Llamada a la acción -->
+  <section class="py-5 text-center" style="background-color:#F5F5F5;">
+    <div class="container">
+      <h4 class="mb-3">¿Listo para transformar tu alimentación?</h4>
+      <p class="mb-4">
+        Descarga gratis mi guía rápida de 5 pasos para comenzar a comer
+        saludable sin complicaciones.
+      </p>
+      <a href="https://biolink.info/Ejevidasaludable"
+         class="btn btn-primary btn-lg">
+        Descargar guía gratuita
+      </a>
+    </div>
+  </section>
+  
+{% endblock %}

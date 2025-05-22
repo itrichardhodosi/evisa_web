@@ -1,0 +1,53 @@
+{# main/templates/main/post_list.html #}
+{% extends 'main/base.html' %}
+{% block titulo %}Blog – Eje Vida Saludable{% endblock %}
+
+{% block contenido %}
+<h1 class="mb-4">Blog</h1>
+
+<form class="d-flex mb-4" method="get">
+  <input class="form-control me-2" name="q" placeholder="Buscar..." value="{{ request.GET.q|default:'' }}">
+  <button class="btn btn-outline-primary">Buscar</button>
+</form>
+
+<div class="row g-4">
+  {% for post in posts %}
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        {% if post.imagen %}
+          <img src="{{ post.imagen.url }}" class="card-img-top" alt="{{ post.titulo }}">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ post.titulo }}</h5>
+          <p class="card-text">{{ post.extracto }}</p>
+          <a href="{{ post.get_absolute_url }}" class="btn btn-evisa-secondary">Leer más</a>
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <p>No hay artículos publicados.</p>
+  {% endfor %}
+</div>
+
+<nav class="mt-4">
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Anterior</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+    {% endif %}
+    <li class="page-item disabled">
+      <span class="page-link">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+    </li>
+    {% if page_obj.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Siguiente</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">Siguiente</span></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endblock %}
